@@ -9,83 +9,88 @@
 }
 .navbar{
     
-    background-color: rgb(0, 68, 255);
-    position: relative;   
+    background-color: rgb(0, 68, 255);  
+    line-height: 2.5;
 }
-.navbar #logo{
-    color: #fff;
-    width:45%;
-    font-size: 25px;
+#logo{
     display: inline-block;
-    padding-left:50px;
-    line-height: 1.5;
-    
+    width: 40%;
+    text-align: center;
+    color: white;
 }
-.navbar #menu{
+#menu{
     display: inline-block;
-    position: absolute;
-    width: 30%;
-    right:10px;
-    padding: 3px;
+    width: 55%;
+    text-align: right;
 }
-.navbar #menu ul{
-    list-style: none;
-    text-align: center;
-     margin: auto;
-}
-.navbar #menu li{
-    display: inline-block; 
-    margin: auto;
-    line-height: 2; 
-}
-.navbar #menu a{
+#menu a{
     text-decoration: none;
-    color: white;
-    padding: 6px;
 }
-.navbar #menu a:hover{
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    background-color: rgb(0, 89, 255);
-    border: 1px solid white; 
+#menu li{
+    display: inline;
+    padding: 10px;
 }
-.menu-toggle{
-    position: absolute;
-    top:2px;
-    right:10px;
-    padding:10px;
-    opacity: 0;
+#menu ul{
+    list-style-type: none;
 }
-.bar{
-    display: block;
-    background-color: white;
-    width: 25px;
-    height: 3px;
-    margin-bottom: 5px;
+#menu a{
+ color: white;
 }
+
 
 
 @media screen and (max-width:768px) {
-    
-    
-    .navbar #logo{
-        width:100%;
-        text-align: left;
-        background-color: teal;
-        
+    .navbar{
+        position: relative;
     }
-.menu-toggle{
-    opacity:100%;
-}
-.menu-toggle:hover{
-    background-color: red;
-}
-.navbar #menu{
+.navbar #logo{
     display: block;
-    left:-200px
+    width: 100%;
+    float: right;
+    text-align: center;
+    background-color: yellow;
+    
 }
-.navbar #menu li{
- display: block;
+
+#menu{
+    display: block;
+    width: 100%;
+    border: 1px solid yellow;
+    background-color: yellowgreen;
+    position: absolute;
+    left: -100%;
+    top:40px;
+    opacity: 0;
+    line-height: 1.2;
+}
+#menu ul{
+    text-align: center;
+    border: 1px solid tomato;
+}
+#menu li{
+    display: block;
+}
+#menu li:hover{
+    background-color: green;
+}
+.navbar .menu-toggle{
+    position: absolute;
+    right:5px;
+    top: 5px;
+    padding: 0px;
+}
+.menu-toggle .bar{
+
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+#menu.active
+{
+        left:0;
+        opacity: 1;
+        transition: all 0.5s ease;
 }
 }
