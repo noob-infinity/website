@@ -5,8 +5,9 @@
     margin: 0px;
     padding: 0px;
     font-family: 'KoHo', sans-serif;
-  
 }
+
+/*******************Navbar CSs**********************************/
 .navbar{   
     background-color: black;
     padding: 2px;
@@ -26,8 +27,6 @@
 .navbar #menu a{
     text-decoration: none;
 }
-
-
 .navbar #menu li{
     display: inline;
     padding: 10px;
@@ -42,9 +41,9 @@
 .navbar #menu a{
  color: white;
 }
+/*******************slider CSS**********************************/
 #slider{
-    overflow: hidden;
-    
+    overflow: hidden;   
     aspect-ratio: 144/35;
 }
 #slider  figure{
@@ -69,8 +68,10 @@
        left:-200%;
    }
 }
+/*******************Media Queries**********************************/
+
 @media screen and (max-width:768px) {
-    .navbar{
+.navbar{
         position: absolute;
         width: 100%;
     }
@@ -101,43 +102,17 @@
     padding: 0px;
 }
 .navbar .menu-toggle .bar{
-
     display: block;
     width: 25px;
     height: 4px;
     background-color: white;
     margin-bottom: 5px;
 }
-
 .navbar #menu.active
 {
         left:0;
         opacity: 1;
         transition: all 0.5s ease-in-out;
         background-color: black;
-}
-
-#slider{
-    overflow: hidden;
-}
-#slider  figure{
-    position: relative;
-    width: 300%;
-    margin: 0;
-    left: 0;
-    animation:  slider 20s  infinite;
-}
-#slider figure img{
-    float: left;
-    width: 33.3%;
-}
-@keyframes slider {
-    30%{
-      left: -100%;
-    }
-   60%
-   {
-       left:-200%;
-   }
 }
 }
