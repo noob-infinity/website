@@ -5,73 +5,94 @@
     margin: 0px;
     padding: 0px;
     font-family: 'KoHo', sans-serif;
-    
+  
 }
-.navbar{
-    
-    background-color: rgb(0, 68, 255);  
+.navbar{   
+    background-color: black;
+    padding: 2px;
     line-height: 2.5;
 }
-#logo{
+.navbar #logo{
     display: inline-block;
     width: 40%;
     text-align: center;
     color: white;
 }
-#menu{
+.navbar #menu{
     display: inline-block;
     width: 55%;
     text-align: right;
 }
-#menu a{
+.navbar #menu a{
     text-decoration: none;
 }
-#menu li{
+
+
+.navbar #menu li{
     display: inline;
     padding: 10px;
 }
-#menu ul{
+.navbar #menu li:hover{
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.navbar #menu ul{
     list-style-type: none;
 }
-#menu a{
+.navbar #menu a{
  color: white;
 }
+#slider{
+    overflow: hidden;
+    
+    aspect-ratio: 144/35;
+}
+#slider  figure{
+    position: relative;
+    width: 300%;
+    left: 0;
+    z-index: -1;
+    animation:  slider 20s  infinite;
+}
+#slider figure img{
+    float: left;
+    width: 33.3%;
+    z-index: -1;
+}
 
-
-
+@keyframes slider {
+    30%{
+      left: -100%;
+    }
+   60%
+   {
+       left:-200%;
+   }
+}
 @media screen and (max-width:768px) {
     .navbar{
-        position: relative;
+        position: absolute;
+        width: 100%;
     }
 .navbar #logo{
     display: block;
     width: 100%;
     float: right;
-    text-align: center;
-    background-color: yellow;
-    
+    text-align: center; 
 }
-
-#menu{
+.navbar #menu{
     display: block;
-    width: 100%;
-    border: 1px solid yellow;
-    background-color: yellowgreen;
+    width: 100%;   
     position: absolute;
     left: -100%;
     top:40px;
-    opacity: 0;
     line-height: 1.2;
 }
-#menu ul{
+.navbar #menu ul{
     text-align: center;
-    border: 1px solid tomato;
 }
-#menu li{
+.navbar #menu li{
     display: block;
-}
-#menu li:hover{
-    background-color: green;
 }
 .navbar .menu-toggle{
     position: absolute;
@@ -79,7 +100,7 @@
     top: 5px;
     padding: 0px;
 }
-.menu-toggle .bar{
+.navbar .menu-toggle .bar{
 
     display: block;
     width: 25px;
@@ -87,10 +108,36 @@
     background-color: white;
     margin-bottom: 5px;
 }
-#menu.active
+
+.navbar #menu.active
 {
         left:0;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: all 0.5s ease-in-out;
+        background-color: black;
+}
+
+#slider{
+    overflow: hidden;
+}
+#slider  figure{
+    position: relative;
+    width: 300%;
+    margin: 0;
+    left: 0;
+    animation:  slider 20s  infinite;
+}
+#slider figure img{
+    float: left;
+    width: 33.3%;
+}
+@keyframes slider {
+    30%{
+      left: -100%;
+    }
+   60%
+   {
+       left:-200%;
+   }
 }
 }
