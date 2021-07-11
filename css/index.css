@@ -68,6 +68,53 @@
        left:-200%;
    }
 }
+
+/**********************************GRID*******************************************/
+
+.container{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-gap:1px;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid teal;
+  
+   padding: 0;
+   justify-items: center;
+
+}
+.container .services-block{
+    display: grid;
+    grid-template-rows: 8fr 1fr;
+    background-color:  #eee;
+    width: 200px;
+    aspect-ratio: 1;
+}
+.container .services-logo{
+background-size: contain;
+background-repeat: no-repeat;
+}
+#blk1 .services-logo{
+background-image: url('img/tax.png');
+}
+#blk2 .services-logo{
+    background-image: url('img/service-logo-2.png');
+    background-size: cover;
+    }
+.container .services-footer{
+   background-color: black;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+}
+.header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
 /*******************Media Queries**********************************/
 
 @media screen and (max-width:768px) {
@@ -114,5 +161,9 @@
         opacity: 1;
         transition: all 0.5s ease-in-out;
         background-color: black;
+}
+
+.container{
+    grid-template-columns:auto auto;
 }
 }
